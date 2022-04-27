@@ -1,67 +1,67 @@
 package Stats;
 
 import java.io.*;
-import java.text.NumberFormat;
+
 import java.util.Scanner;
 
 public class Stats {
 
 	public static void main(String[] args) {
+		
 		Scanner input = new Scanner(System.in);
-	
-		File textFile;
+
+		File textFile = new File("C:\\Users\\1100021407\\git\\Cs30-2-\\chap11\\src\\Stats\\stat2.dat");
 		FileWriter out;
-		BufferedReader readFile;
+		BufferedWriter writeFile;
 
-		String fileName, stuName, stuGrade = null;
+		String stuName;
+		double max = Integer.MIN_VALUE;
+		double min = Integer.MAX_VALUE;
 		int numGrade = 0;
-		double AvgGrade;
+		double AvgGrade = 0;
 		double totalGrade = 0;
+		double stuGrade;
 
-		// Obtain file name from user
-		System.out.println("Enter the name of the test file: ");
-		fileName = input.nextLine();
-
-		// read file, display student name, and statistics
-		textFile = new File(fileName);
-		int max = Integer.MIN_VALUE;
-		int min = Integer.MAX_VALUE;
 		try {
-			out = new FileReader(textFile);
-			readFile = new BufferedReader(in);
-			while ((stuName = readFile.readLine()) != null) {
-				stuGrade = readFile.readLine();
-				numGrade += 1;
-				totalGrade += Double.parseDouble(stuGrade);
+			out = new FileWriter(textFile);
+			writeFile = new BufferedWriter(out);
 
-				AvgGrade = totalGrade / numGrade;
+			for (int i = 0; i < 5; i++) {
+				System.out.println("Enter Studer Name: ");
+				stuName = input.next();
+				System.out.println("Enter Studer Grade: ");
+				stuGrade = input.nextDouble();
+				 
+				totalGrade += stuGrade;
+				numGrade++;
 				System.out.println(stuName + "\t" + stuGrade);
-				int grade = (int) Double.parseDouble(stuGrade);
 
-				if (grade > max) {
-					max = grade;
+				if (stuGrade > max) {
+					max = stuGrade;
 				}
-
-				if (grade < min) {
-					min = grade;
+				if (stuGrade < min) {
+					min = stuGrade;
 				}
-}
-
+				
+				writeFile.write(stuName);
+				writeFile.newLine();
+				writeFile.write(String.valueOf(stuGrade));
+				writeFile.newLine();
+				
+				
+				
+			}
+			
+			
+			AvgGrade = totalGrade / numGrade;
+			System.out.println("Average Grade" + "\t" + AvgGrade);
 			System.out.println("Highest Grade" + "\t" + max);
 			System.out.println("lowest Grade" + "\t" + min);
-
-			readFile.close();
-			in.close();
-
-		} catch (FileNotFoundException e) {
-			System.out.println("File not exist!");
-			System.err.println("FileNotFoundException: " + e.getMessage());
-
+			writeFile.close();
+			out.close();
 		} catch (IOException e) {
-			System.out.println("Problem reading file.");
+			System.out.println("Problem Writting file.");
 			System.err.println("IOException: " + e.getMessage());
 		}
-
 	}
-
 }
