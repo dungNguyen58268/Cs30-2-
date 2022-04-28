@@ -65,3 +65,48 @@ public class Stats {
 		}
 	}
 }
+/*
+ Enter Studer Name: 
+fjkshkhkh
+Enter Studer Grade: 
+60
+fjkshkhkh	60.0
+Enter Studer Name: 
+lfnaklnklfna
+Enter Studer Grade: 
+20
+lfnaklnklfna	20.0
+Enter Studer Name: 
+sdfklnlksdnfl
+Enter Studer Grade: 
+78
+sdfklnlksdnfl	78.0
+Enter Studer Name: 
+nklsfnlan
+Enter Studer Grade: 
+50
+nklsfnlan	50.0
+Enter Studer Name: 
+ndfklnalsndl
+Enter Studer Grade: 
+20
+ndfklnalsndl	20.0
+Average Grade	45.6
+Highest Grade	78.0
+lowest Grade	20.0
+
+ */
+/*
+ stat2.dat
+ fjkshkhkh
+60.0
+lfnaklnklfna
+20.0
+sdfklnlksdnfl
+78.0
+nklsfnlan
+50.0
+ndfklnalsndl
+20.0
+
+ */
