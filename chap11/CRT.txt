@@ -1,0 +1,15 @@
+1. No, it called an
+2. File textfile = new File(filename)
+3. missing a \
+4.
+try catch finally statement
+try {
+} catch (FileNotFoundException e) {
+			System.out.println("File does not exist or could not be found.");
+			System.err.println("FileNotFoundException: " + e.getMessage());
+		} catch (IOException e) {
+			System.out.println("Problem reading file.");
+			System.err.println("IOException: " + e.getMessage());
+		}
+5. err stream
+from the getMessage() method
