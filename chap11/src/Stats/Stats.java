@@ -12,7 +12,8 @@ public class Stats {
 
 		File textFile = new File("C:\\Users\\1100021407\\git\\Cs30-2-\\chap11\\src\\Stats\\stat2.dat");
 		FileWriter out;
-		BufferedWriter writeFile;
+
+
 
 		String stuName;
 		double max = Integer.MIN_VALUE;
@@ -24,7 +25,7 @@ public class Stats {
 
 		try {
 			out = new FileWriter(textFile);
-			writeFile = new BufferedWriter(out);
+			BufferedWriter writeFile = new BufferedWriter(out);
 
 			for (int i = 0; i < 5; i++) {
 				System.out.println("Enter Studer Name: ");

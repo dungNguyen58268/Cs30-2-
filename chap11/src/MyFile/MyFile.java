@@ -9,7 +9,7 @@ public class MyFile {
 
 		Scanner input = new Scanner(System.in);
 
-		File textFile = new File("C:\\Users\\1100021407\\git\\Cs30\\chap11\\src\\MyFile\\zzz.txt");
+		File textFile = new File("C:\\Users\\1100021407\\git\\Cs30-2-\\chap11\\src\\MyFile\\zzz.txt");
 		if (textFile.exists()) {
 			System.out.println("File already exist");
 		} else {
