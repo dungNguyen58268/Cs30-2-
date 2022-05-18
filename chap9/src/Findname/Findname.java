@@ -30,3 +30,16 @@ public class Findname {
 		}
 	}
 }
+/*
+Number of names:
+3
+Enter name:
+a
+Enter name:
+b
+Enter name:
+c
+Enter a name to find:
+b
+name is found in location 2
+ */
